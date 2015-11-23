@@ -31,14 +31,18 @@ public class DisplayPictureBean extends Canvas implements PropertyChangeListener
     public void paint(Graphics g) {
         super.paint(g);
 
-        if(_fastBitmap != null){
-            g.drawImage(_fastBitmap.toImage(), 0, 0, null);
-        }else{
-           drawName(g, "Display");
+        if (_fastBitmap != null) {
+            drawImage(g, _fastBitmap.toImage());
+        } else {
+            drawName(g, "Display");
         }
     }
 
-    private void drawName(Graphics g, String name){
+    private void drawImage(Graphics g, Image image) {
+        g.drawImage(image, 0, 0, 200, 100, null);
+    }
+
+    private void drawName(Graphics g, String name) {
         super.paint(g);
         Dimension d = getSize();
         int w = d.width;

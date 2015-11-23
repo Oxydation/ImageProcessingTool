@@ -11,6 +11,7 @@ import java.io.Serializable;
  * Created by Mathias on 23/11/2015.
  */
 public abstract class AbstractPictureBean extends Component implements Serializable {
+    private String _name =  "";
     private FastBitmap _original;
     private FastBitmap _result;
 
@@ -42,5 +43,41 @@ public abstract class AbstractPictureBean extends Component implements Serializa
         _result = result;
     }
 
+    @Override
+    public String getName() {
+        return _name;
+    }
+
+    @Override
+    public void setName(String name) {
+        _name = name;
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        drawName(g, getName());
+    }
+
+    public Dimension getPreferredSize() {
+        Graphics g = getGraphics();
+        FontMetrics fm = g.getFontMetrics();
+        int w = fm.stringWidth(getName()) + 2 * 10;
+        int h = fm.getHeight() + 2 * 10;
+        return new Dimension(w, h);
+    }
+
+    protected void drawName(Graphics g, String name) {
+        super.paint(g);
+        Dimension d = getSize();
+        int w = d.width;
+        int h = d.height;
+        FontMetrics fm = g.getFontMetrics();
+        int x = (d.width - fm.stringWidth(name)) / 2;
+        int y = (d.height + fm.getMaxAscent() -
+                fm.getMaxDescent()) / 2;
+        g.drawString(name, x, y);
+        g.drawRect(0, 0, w - 1, h - 1);
+    }
 
 }

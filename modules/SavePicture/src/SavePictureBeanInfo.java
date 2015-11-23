@@ -14,7 +14,7 @@ public class SavePictureBeanInfo extends SimpleBeanInfo {
             PropertyDescriptor targetFile = new PropertyDescriptor("targetFile", beanClass);
             targetFile.setBound(true);
 
-            PropertyDescriptor[] propertyDescriptors = {};
+            PropertyDescriptor[] propertyDescriptors = {targetFile};
             return propertyDescriptors;
 
         } catch (IntrospectionException e) {

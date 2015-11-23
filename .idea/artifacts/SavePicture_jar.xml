@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="PictureLoader:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/PictureLoader_jar</output-path>
-    <root id="archive" name="PictureLoader.jar">
-      <element id="module-output" name="LoadPicture" />
+  <artifact type="jar" build-on-make="true" name="SavePicture:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SavePicture_jar</output-path>
+    <root id="archive" name="SavePicture.jar">
+      <element id="module-output" name="SavePicture" />
       <element id="module-output" name="ImageProcessingTool" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/catalano/Catalano.Core.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/catalano/Catalano.Graph.jar" path-in-jar="/" />
