@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/Dilate/Dilate.iml" filepath="$PROJECT_DIR$/modules/Dilate/Dilate.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/DisplayPicture/DisplayPicture.iml" filepath="$PROJECT_DIR$/modules/DisplayPicture/DisplayPicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/Erode/Erode.iml" filepath="$PROJECT_DIR$/modules/Erode/Erode.iml" />
       <module fileurl="file://$PROJECT_DIR$/ImageProcessingTool.iml" filepath="$PROJECT_DIR$/ImageProcessingTool.iml" />
