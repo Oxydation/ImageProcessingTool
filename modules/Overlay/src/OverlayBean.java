@@ -19,6 +19,7 @@ public class OverlayBean extends AbstractPictureBean implements PropertyChangeLi
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("result")) {
             setOriginal((FastBitmap) evt.getNewValue());
+            //setOverlayImage((FastBitmap) evt.getNewValue());
             process();
         }
 
@@ -31,7 +32,7 @@ public class OverlayBean extends AbstractPictureBean implements PropertyChangeLi
     public void process() {
         if (getOriginal() != null && getOverlayImage() != null) {
             FastBitmap original = new FastBitmap(getOriginal());
-            And and = new And();
+            And and = new And(getOverlayImage());
             and.applyInPlace(getOriginal());
             setResult(getOriginal());
             setOriginal(original);
