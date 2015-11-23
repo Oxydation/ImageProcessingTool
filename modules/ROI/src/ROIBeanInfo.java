@@ -1,10 +1,11 @@
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
+import java.beans.SimpleBeanInfo;
 
 /**
  * Created by Mathias on 23/11/2015.
  */
-public class ROIBeanInfo {
+public class ROIBeanInfo extends SimpleBeanInfo{
     private final static Class beanClass = ROIBeanInfo.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {

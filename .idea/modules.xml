@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/modules/DisplayPicture/DisplayPicture.iml" filepath="$PROJECT_DIR$/modules/DisplayPicture/DisplayPicture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/Erode/Erode.iml" filepath="$PROJECT_DIR$/modules/Erode/Erode.iml" />
       <module fileurl="file://$PROJECT_DIR$/ImageProcessingTool.iml" filepath="$PROJECT_DIR$/ImageProcessingTool.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" filepath="$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/ROI/ROI.iml" filepath="$PROJECT_DIR$/modules/ROI/ROI.iml" />
