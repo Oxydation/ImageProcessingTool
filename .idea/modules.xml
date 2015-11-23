@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" filepath="$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/ROI/ROI.iml" filepath="$PROJECT_DIR$/modules/ROI/ROI.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/SavePicture/SavePicture.iml" filepath="$PROJECT_DIR$/modules/SavePicture/SavePicture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/Threshold/Threshold.iml" filepath="$PROJECT_DIR$/modules/Threshold/Threshold.iml" />
     </modules>
   </component>
 </project>

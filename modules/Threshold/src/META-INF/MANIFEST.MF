@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Name: ErodeBean.class
+Name: ThresholdBean.class
 Java-Bean: True
