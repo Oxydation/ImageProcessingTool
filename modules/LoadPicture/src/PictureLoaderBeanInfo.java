@@ -24,5 +24,4 @@ public class PictureLoaderBeanInfo extends SimpleBeanInfo {
     public int getDefaultPropertyIndex() {
         return 0;
     }
-
 }

@@ -28,7 +28,7 @@ public class ROIFilter extends DataTransformationFilter<PicturePack> {
     }
 
     @Override
-    protected void process(PicturePack entity) {
+    public void process(PicturePack entity) {
         FastBitmap roi = new FastBitmap(entity.getOriginal().toBufferedImage().getSubimage(0, 60, entity.getOriginal().getWidth(), entity.getOriginal().getHeight() / 4));
 
         entity.setEdited(roi);
