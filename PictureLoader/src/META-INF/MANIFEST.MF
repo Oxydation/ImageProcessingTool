@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: PictureLoaderBean.class
+Java-Bean: True
+
