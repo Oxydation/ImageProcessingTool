@@ -19,14 +19,35 @@ public class DisplayPictureBean extends Canvas implements PropertyChangeListener
         }
     }
 
+    public Dimension getPreferredSize() {
+        Graphics g = getGraphics();
+        FontMetrics fm = g.getFontMetrics();
+        int w = fm.stringWidth("Display") + 2 * 10;
+        int h = fm.getHeight() + 2 * 10;
+        return new Dimension(w, h);
+    }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        if(_fastBitmap != null){
 
+        if(_fastBitmap != null){
             g.drawImage(_fastBitmap.toImage(), 0, 0, null);
         }else{
-            g.drawChars("No image!".toCharArray(),0,9,0,0);
+           drawName(g, "Display");
         }
+    }
+
+    private void drawName(Graphics g, String name){
+        super.paint(g);
+        Dimension d = getSize();
+        int w = d.width;
+        int h = d.height;
+        FontMetrics fm = g.getFontMetrics();
+        int x = (d.width - fm.stringWidth(name)) / 2;
+        int y = (d.height + fm.getMaxAscent() -
+                fm.getMaxDescent()) / 2;
+        g.drawString(name, x, y);
+        g.drawRect(0, 0, w - 1, h - 1);
     }
 }
