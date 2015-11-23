@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: OpeningBean.class
+Java-Bean: True
+

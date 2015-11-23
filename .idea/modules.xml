@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/modules/Erode/Erode.iml" filepath="$PROJECT_DIR$/modules/Erode/Erode.iml" />
       <module fileurl="file://$PROJECT_DIR$/ImageProcessingTool.iml" filepath="$PROJECT_DIR$/ImageProcessingTool.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" filepath="$PROJECT_DIR$/modules/LoadPicture/LoadPicture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/Median/Median.iml" filepath="$PROJECT_DIR$/modules/Median/Median.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/Opening/Opening.iml" filepath="$PROJECT_DIR$/modules/Opening/Opening.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/ROI/ROI.iml" filepath="$PROJECT_DIR$/modules/ROI/ROI.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/SavePicture/SavePicture.iml" filepath="$PROJECT_DIR$/modules/SavePicture/SavePicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/Threshold/Threshold.iml" filepath="$PROJECT_DIR$/modules/Threshold/Threshold.iml" />
