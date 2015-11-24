@@ -2,6 +2,9 @@ import Catalano.Imaging.FastBitmap;
 import Catalano.Imaging.Filters.Invert;
 import Catalano.Imaging.Filters.Threshold;
 import at.itb13.beans.AbstractPictureBean;
+import at.itb13.imaging.entities.PicturePack;
+import at.itb13.imaging.filter.ThresholdFilter;
+import at.itb13.pipesandfilter.interfaces.Writeable;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -10,7 +13,7 @@ import java.beans.PropertyChangeListener;
  * Created by Mathias on 23/11/2015.
  */
 public class ThresholdBean extends AbstractPictureBean implements PropertyChangeListener {
-    private int _threshold;
+    private int _threshold = 50;
 
     public ThresholdBean() {
         setName(getClass().getName());
