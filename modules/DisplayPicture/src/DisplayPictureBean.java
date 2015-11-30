@@ -14,7 +14,8 @@ public class DisplayPictureBean extends Canvas implements PropertyChangeListener
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("result")) {
-            _fastBitmap = (FastBitmap) evt.getNewValue();
+            FastBitmap fbm = new FastBitmap((FastBitmap)evt.getNewValue());
+            _fastBitmap = fbm;
             repaint();
         }
     }

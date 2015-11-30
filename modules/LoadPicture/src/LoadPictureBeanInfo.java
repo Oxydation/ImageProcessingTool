@@ -5,8 +5,8 @@ import java.beans.SimpleBeanInfo;
 /**
  * Created by Jasmin on 23.11.2015.
  */
-public class PictureLoaderBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = PictureLoaderBean.class;
+public class LoadPictureBeanInfo extends SimpleBeanInfo {
+    private final static Class beanClass = LoadPictureBean.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

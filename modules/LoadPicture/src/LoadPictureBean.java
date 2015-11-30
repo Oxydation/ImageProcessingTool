@@ -8,11 +8,11 @@ import java.io.StreamCorruptedException;
 /**
  * Created by Mathias on 30.10.2015.
  */
-public class PictureLoaderBean extends AbstractPictureBean {
+public class LoadPictureBean extends AbstractPictureBean {
     private String _sourceFile = "";
     private ImageSource _imageSource;
 
-    public PictureLoaderBean() {
+    public LoadPictureBean() {
         setName(this.getClass().getName());
         _imageSource = new ImageSource("", 1);
     }

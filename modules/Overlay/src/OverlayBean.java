@@ -9,7 +9,8 @@ import java.beans.PropertyChangeListener;
  * Created by Mathias on 23/11/2015.
  */
 public class OverlayBean extends AbstractPictureBean implements PropertyChangeListener {
-    private FastBitmap _overlayImage;
+    private FastBitmap _overlayImage = new FastBitmap(50,50);
+    private FastBitmap _underlayImage = new FastBitmap(50,50);
 
     public OverlayBean() {
         setName(getClass().getName());
@@ -18,24 +19,18 @@ public class OverlayBean extends AbstractPictureBean implements PropertyChangeLi
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("result")) {
-            setOriginal((FastBitmap) evt.getNewValue());
-            //setOverlayImage((FastBitmap) evt.getNewValue());
             process();
         }
-
-        if (evt.getPropertyName().equals("original")) {
-            setOverlayImage((FastBitmap) evt.getNewValue());
-        }
-        //TODO: set overlay image from second source
     }
 
     public void process() {
-        if (getOriginal() != null && getOverlayImage() != null) {
-            FastBitmap original = new FastBitmap(getOriginal());
-            And and = new And(getOverlayImage());
-            and.applyInPlace(getOriginal());
-            setResult(getOriginal());
-            setOriginal(original);
+        if (_overlayImage != null && _underlayImage != null) {
+            FastBitmap original = new FastBitmap(_underlayImage);
+            And and = new And(_underlayImage);
+            and.applyInPlace(_overlayImage);
+            setResult(_underlayImage);
+            setOriginal(_overlayImage);
+            _underlayImage.saveAsJPG("test.jpg");
         }
     }
 
@@ -44,10 +39,20 @@ public class OverlayBean extends AbstractPictureBean implements PropertyChangeLi
     }
 
     public void setOverlayImage(FastBitmap overlayImage) {
-        FastBitmap oldValue = _overlayImage;
-        _overlayImage = overlayImage;
-        _changes.firePropertyChange("overlayImage", oldValue, overlayImage);
+        FastBitmap old = _overlayImage;
+        this._overlayImage = overlayImage;
+        _changes.firePropertyChange("overlayImage", old, overlayImage);
+        process();
+    }
 
+    public FastBitmap getUnderlayImage() {
+        return _underlayImage;
+    }
+
+    public void setUnderlayImage(FastBitmap underlayImage) {
+        FastBitmap old = _underlayImage;
+        this._underlayImage = underlayImage;
+        _changes.firePropertyChange("underlay", old, underlayImage);
         process();
     }
 }
