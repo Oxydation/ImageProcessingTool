@@ -39,8 +39,9 @@ public abstract class AbstractPictureBean extends Component implements Serializa
     }
 
     public void setResult(FastBitmap result) {
-        _changes.firePropertyChange("result", _result, result);
+        FastBitmap old = _result;
         _result = result;
+        _changes.firePropertyChange("result", old, result);
     }
 
     @Override

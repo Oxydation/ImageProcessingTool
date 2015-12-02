@@ -10,8 +10,8 @@ import java.beans.PropertyChangeListener;
 public class ROIBean extends AbstractPictureBean implements PropertyChangeListener {
     private int _xOffset = 0;
     private int _yOffset = 60;
-    private int _width = 448;
-    private int _heigth = 79 ;
+    private int _width = 445;
+    private int _heigth = 75 ;
 
     public ROIBean() {
         setName(this.getClass().getName());

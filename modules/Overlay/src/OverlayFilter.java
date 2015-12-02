@@ -27,7 +27,7 @@ public class OverlayFilter implements IBaseInPlace {
     private int _width = 448;
     private int _heigth = 79;
 
-    private int _replaceColor = 0; // 0 .. White, 255 .. Black
+    private int[] _replaceColor = new int[]{240, 240, 240}; // 255 .. White, 0 .. Black
 
     /**
      * Initialize a new instance of the Or class.
@@ -58,14 +58,15 @@ public class OverlayFilter implements IBaseInPlace {
     public void applyInPlace(FastBitmap sourceImage) {
         int width = overlayImage.getWidth();
         int height = overlayImage.getHeight();
-        if ((sourceImage.isGrayscale()) && (overlayImage.isGrayscale())) {
-            int grayO;
-            for (int x = 0; x < height; x++) {
-                for (int y = 0; y < width; y++) {
-                    grayO = overlayImage.getGray(x, y);
-                    if (grayO == _replaceColor) {
-                        sourceImage.setGray(x + getxOffset(), y + getyOffset(), grayO);
-                    }
+
+        int[] rgbO;
+        for (int x = 0; x < height; x++) {
+            for (int y = 0; y < width; y++) {
+                rgbO = overlayImage.getRGB(x, y);
+
+                if (rgbO[0] >= _replaceColor[0] && rgbO[1] >= _replaceColor[1] && rgbO[2] >= _replaceColor[2]) {
+                    // x and y is reverted
+                    sourceImage.setRGB(x + getyOffset(), y + getxOffset(), rgbO);
                 }
             }
         }
@@ -103,11 +104,5 @@ public class OverlayFilter implements IBaseInPlace {
         _heigth = heigth;
     }
 
-    public int getReplaceColor() {
-        return _replaceColor;
-    }
 
-    public void setReplaceColor(int replaceColor) {
-        _replaceColor = replaceColor;
-    }
 }
