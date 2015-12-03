@@ -15,7 +15,13 @@ public class OverlayBeanInfo extends SimpleBeanInfo {
             PropertyDescriptor underlayImage = new PropertyDescriptor("underlayImage", beanClass);
             underlayImage.setBound(true);
 
-            PropertyDescriptor[] propertyDescriptors = {overlayImage, underlayImage};
+            PropertyDescriptor original = new PropertyDescriptor("original", beanClass);
+            PropertyDescriptor result = new PropertyDescriptor("result", beanClass);
+
+            original.setBound(true);
+            result.setBound(true);
+
+            PropertyDescriptor[] propertyDescriptors = {overlayImage, underlayImage, original, result};
             return propertyDescriptors;
 
         } catch (IntrospectionException e) {

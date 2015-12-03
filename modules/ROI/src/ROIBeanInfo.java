@@ -20,7 +20,13 @@ public class ROIBeanInfo extends SimpleBeanInfo{
             width.setBound(true);
             heigth.setBound(true);
 
-            PropertyDescriptor[] propertyDescriptors = {xOffset, yOffset, width, heigth};
+            PropertyDescriptor original = new PropertyDescriptor("original", beanClass);
+            PropertyDescriptor result = new PropertyDescriptor("result", beanClass);
+
+            original.setBound(true);
+            result.setBound(true);
+
+            PropertyDescriptor[] propertyDescriptors = {xOffset, yOffset, width, heigth, original, result};
             return propertyDescriptors;
 
         } catch (IntrospectionException e) {

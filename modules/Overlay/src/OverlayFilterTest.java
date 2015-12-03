@@ -10,10 +10,19 @@ public class OverlayFilterTest {
         FastBitmap originalImage = new FastBitmap("loetstellen.jpg");
         FastBitmap overlayImage = new FastBitmap("test.jpg");
 
-        OverlayFilter overlayFilter = new OverlayFilter(overlayImage);
-        overlayFilter.applyInPlace(originalImage);
+//        OverlayFilter overlayFilter = new OverlayFilter(overlayImage);
+//        overlayFilter.applyInPlace(originalImage);
+//
+//        originalImage.saveAsJPG("blasaaa.jpg");
+//        overlayImage.saveAsJPG(("blasaaa2.jpg"));
 
-        originalImage.saveAsJPG("blasaaa.jpg");
-        overlayImage.saveAsJPG(("blasaaa2.jpg"));
+        Overlay o = new Overlay();
+        o.setOverlayImage(overlayImage);
+        o.setUnderlayImage(originalImage);
+
+        o.process();
+
+       FastBitmap fbm =  o.getResult();
+        fbm.saveAsJPG("RESULT.jpg");
     }
 }

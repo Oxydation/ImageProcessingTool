@@ -13,7 +13,13 @@ public class ThresholdBeanInfo extends SimpleBeanInfo {
             PropertyDescriptor threshold = new PropertyDescriptor("threshold", beanClass);
             threshold.setBound(true);
 
-            PropertyDescriptor[] propertyDescriptors = {threshold};
+            PropertyDescriptor original = new PropertyDescriptor("original", beanClass);
+            PropertyDescriptor result = new PropertyDescriptor("result", beanClass);
+
+            original.setBound(true);
+            result.setBound(true);
+
+            PropertyDescriptor[] propertyDescriptors = {threshold, original, result};
             return propertyDescriptors;
 
         } catch (IntrospectionException e) {

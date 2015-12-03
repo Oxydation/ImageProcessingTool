@@ -13,7 +13,12 @@ public class ErodeBeanInfo extends SimpleBeanInfo {
             PropertyDescriptor radius = new PropertyDescriptor("radius", beanClass);
             radius.setBound(true);
 
-            PropertyDescriptor[] propertyDescriptors = {radius};
+            PropertyDescriptor original = new PropertyDescriptor("original", beanClass);
+            PropertyDescriptor result = new PropertyDescriptor("result", beanClass);
+
+            original.setBound(true);
+            result.setBound(true);
+            PropertyDescriptor[] propertyDescriptors = {radius, original, result};
             return propertyDescriptors;
 
         } catch (IntrospectionException e) {
