@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Mathias on 23/11/2015.
  */
 public class ErodeBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = ErodeBeanInfo.class;
+    private final static Class beanClass = Erode.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

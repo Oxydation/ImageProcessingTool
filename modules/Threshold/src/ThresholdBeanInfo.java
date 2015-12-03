@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Mathias on 23/11/2015.
  */
 public class ThresholdBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = ThresholdBeanInfo.class;
+    private final static Class beanClass = Threshold.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

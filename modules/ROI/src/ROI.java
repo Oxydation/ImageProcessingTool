@@ -28,28 +28,28 @@ public class ROI extends AbstractPicture implements PropertyChangeListener {
     private void process() {
         if (getOriginal() != null) {
             FastBitmap fastBitmap = new FastBitmap(getOriginal());
-            FastBitmap roi = new FastBitmap(getOriginal().toBufferedImage().getSubimage(getxOffset(), getyOffset(), getWidth(), getHeigth()));
+            FastBitmap roi = new FastBitmap(getOriginal().toBufferedImage().getSubimage(getXOffset(), getYOffset(), getWidth(), getHeigth()));
             setResult(roi);
             setOriginal(fastBitmap);
         }
     }
 
-    public int getxOffset() {
+    public int getXOffset() {
         return _xOffset;
     }
 
-    public void setxOffset(int xOffset) {
+    public void setXOffset(int xOffset) {
         int oldValue = _xOffset;
         _xOffset = xOffset;
         _changes.firePropertyChange("xOffset", oldValue, _xOffset);
         process();
     }
 
-    public int getyOffset() {
+    public int getYOffset() {
         return _yOffset;
     }
 
-    public void setyOffset(int yOffset) {
+    public void setYOffset(int yOffset) {
         int oldValue = _yOffset;
         _yOffset = yOffset;
         _changes.firePropertyChange("yOffset", oldValue, _yOffset);

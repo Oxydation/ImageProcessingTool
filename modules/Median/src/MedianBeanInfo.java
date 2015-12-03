@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Mathias on 23/11/2015.
  */
 public class MedianBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = MedianBeanInfo.class;
+    private final static Class beanClass = Median.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

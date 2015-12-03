@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Mathias on 23/11/2015.
  */
 public class ROIBeanInfo extends SimpleBeanInfo{
-    private final static Class beanClass = ROIBeanInfo.class;
+    private final static Class beanClass = ROI.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Mathias on 23/11/2015.
  */
 public class ClosingBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = ClosingBeanInfo.class;
+    private final static Class beanClass = Closing.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {
