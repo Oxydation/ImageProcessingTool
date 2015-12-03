@@ -1,5 +1,5 @@
 import Catalano.Imaging.FastBitmap;
-import at.itb13.beans.AbstractPictureBean;
+import at.itb13.beans.AbstractPicture;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -7,11 +7,11 @@ import java.beans.PropertyChangeListener;
 /**
  * Created by Mathias on 23/11/2015.
  */
-public class OverlayBean extends AbstractPictureBean implements PropertyChangeListener {
-    private FastBitmap _overlayImage = new FastBitmap(50, 50);
-    private FastBitmap _underlayImage = new FastBitmap(50, 50);
+public class Overlay extends AbstractPicture implements PropertyChangeListener {
+    private FastBitmap _overlayImage;// = new FastBitmap(50, 50);
+    private FastBitmap _underlayImage;// = new FastBitmap(50, 50);
 
-    public OverlayBean() {
+    public Overlay() {
         setName(getClass().getName());
     }
 
@@ -31,6 +31,7 @@ public class OverlayBean extends AbstractPictureBean implements PropertyChangeLi
             setOriginal(_overlayImage);
             setResult(_underlayImage);
             _underlayImage.saveAsJPG("test.jpg");
+            _overlayImage.saveAsJPG("TestOverlay.jpg");
         }
     }
 

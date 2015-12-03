@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Name: OpeningBean.class
+Name: Opening.class
 Java-Bean: True
 

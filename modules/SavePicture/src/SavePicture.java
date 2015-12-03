@@ -1,5 +1,5 @@
 import Catalano.Imaging.FastBitmap;
-import at.itb13.beans.AbstractPictureBean;
+import at.itb13.beans.AbstractPicture;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -7,10 +7,10 @@ import java.beans.PropertyChangeListener;
 /**
  * Created by Jasmin on 23.11.2015.
  */
-public class SavePictureBean extends AbstractPictureBean implements PropertyChangeListener {
+public class SavePicture extends AbstractPicture implements PropertyChangeListener {
     private String _targetFile = "";
 
-    public SavePictureBean() {
+    public SavePicture() {
         setName(this.getClass().getName());
     }
 

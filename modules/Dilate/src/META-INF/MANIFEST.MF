@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Name: DilateBean.class
+Name: Dilate.class
 Java-Bean: True
 

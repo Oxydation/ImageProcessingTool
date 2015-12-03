@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Name: DisplayPictureBean.class
+Name: DisplayPicture.class
 Java-Bean: True
 

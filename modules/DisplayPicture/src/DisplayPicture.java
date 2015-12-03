@@ -7,7 +7,7 @@ import java.beans.PropertyChangeListener;
 /**
  * Created by Jasmin on 23.11.2015.
  */
-public class DisplayPictureBean extends Canvas implements PropertyChangeListener {
+public class DisplayPicture extends Canvas implements PropertyChangeListener {
 
     private FastBitmap _fastBitmap;
 

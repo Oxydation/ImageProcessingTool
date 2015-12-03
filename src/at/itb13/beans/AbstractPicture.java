@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Created by Mathias on 23/11/2015.
  */
-public abstract class AbstractPictureBean extends Component implements Serializable {
+public abstract class AbstractPicture extends Component implements Serializable {
     private String _name =  "";
     private FastBitmap _original;
     private FastBitmap _result;

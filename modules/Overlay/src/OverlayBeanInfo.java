@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Jasmin on 24.11.2015.
  */
 public class OverlayBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = OverlayBean.class;
+    private final static Class beanClass = Overlay.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

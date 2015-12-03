@@ -1,6 +1,6 @@
 import Catalano.Imaging.FastBitmap;
-import Catalano.Imaging.Filters.Closing;
-import at.itb13.beans.AbstractPictureBean;
+import Catalano.Imaging.Filters.Erosion;
+import at.itb13.beans.AbstractPicture;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -8,11 +8,11 @@ import java.beans.PropertyChangeListener;
 /**
  * Created by Mathias on 23/11/2015.
  */
-public class ClosingBean extends AbstractPictureBean implements PropertyChangeListener {
+public class Erode extends AbstractPicture implements PropertyChangeListener{
     private int _radius = 1;
 
-    public ClosingBean() {
-        setName(getClass().getName());
+    public Erode(){
+        setName(this.getClass().getName());
     }
 
     @Override
@@ -23,11 +23,11 @@ public class ClosingBean extends AbstractPictureBean implements PropertyChangeLi
         }
     }
 
-    public void process() {
-        if (getOriginal() != null) {
+    public void process(){
+        if(getOriginal() != null){
             FastBitmap original = new FastBitmap(getOriginal());
-            Closing closing = new Closing(getRadius());
-            closing.applyInPlace(getOriginal());
+            Erosion erosion = new Erosion();
+            erosion.applyInPlace(getOriginal());
             setResult(getOriginal());
             setOriginal(original);
         }
@@ -40,7 +40,7 @@ public class ClosingBean extends AbstractPictureBean implements PropertyChangeLi
     public void setRadius(int radius) {
         int oldValue = _radius;
         _radius = radius;
-        _changes.firePropertyChange("radius", oldValue, _radius);
+        _changes.firePropertyChange("radius", oldValue,_radius);
 
         process();
     }

@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Name: MedianBean.class
+Name: Median.class
 Java-Bean: True
 

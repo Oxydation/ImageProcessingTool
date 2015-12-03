@@ -1,18 +1,17 @@
-import at.itb13.beans.AbstractPictureBean;
+import at.itb13.beans.AbstractPicture;
 import at.itb13.imaging.entities.PicturePack;
 import at.itb13.pipesandfilter.filter.ImageSource;
 
-import java.awt.*;
 import java.io.StreamCorruptedException;
 
 /**
  * Created by Mathias on 30.10.2015.
  */
-public class LoadPictureBean extends AbstractPictureBean {
+public class LoadPicture extends AbstractPicture {
     private String _sourceFile = "";
     private ImageSource _imageSource;
 
-    public LoadPictureBean() {
+    public LoadPicture() {
         setName(this.getClass().getName());
         _imageSource = new ImageSource("", 1);
     }

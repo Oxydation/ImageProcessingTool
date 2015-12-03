@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Jasmin on 23.11.2015.
  */
 public class LoadPictureBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = LoadPictureBean.class;
+    private final static Class beanClass = LoadPicture.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

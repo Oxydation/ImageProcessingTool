@@ -6,7 +6,7 @@ import java.beans.SimpleBeanInfo;
  * Created by Jasmin on 23.11.2015.
  */
 public class DilateBeanInfo extends SimpleBeanInfo {
-    private final static Class beanClass = DilateBean.class;
+    private final static Class beanClass = Dilate.class;
 
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {

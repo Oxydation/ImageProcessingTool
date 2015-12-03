@@ -1,6 +1,5 @@
 import Catalano.Imaging.FastBitmap;
-import Catalano.Imaging.Filters.Median;
-import at.itb13.beans.AbstractPictureBean;
+import at.itb13.beans.AbstractPicture;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -8,10 +7,10 @@ import java.beans.PropertyChangeListener;
 /**
  * Created by Mathias on 23/11/2015.
  */
-public class MedianBean extends AbstractPictureBean implements PropertyChangeListener {
+public class Closing extends AbstractPicture implements PropertyChangeListener {
     private int _radius = 1;
 
-    public MedianBean() {
+    public Closing() {
         setName(getClass().getName());
     }
 
@@ -26,7 +25,7 @@ public class MedianBean extends AbstractPictureBean implements PropertyChangeLis
     public void process() {
         if (getOriginal() != null) {
             FastBitmap original = new FastBitmap(getOriginal());
-            Median closing = new Median(getRadius());
+            Catalano.Imaging.Filters.Closing closing = new Catalano.Imaging.Filters.Closing(getRadius());
             closing.applyInPlace(getOriginal());
             setResult(getOriginal());
             setOriginal(original);
