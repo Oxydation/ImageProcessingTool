@@ -3,11 +3,12 @@ import Catalano.Imaging.FastBitmap;
 import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.Serializable;
 
 /**
  * Created by Jasmin on 23.11.2015.
  */
-public class DisplayPicture extends Canvas implements PropertyChangeListener {
+public class DisplayPicture extends Canvas implements PropertyChangeListener, Serializable {
 
     private FastBitmap _fastBitmap;
 

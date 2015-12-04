@@ -22,15 +22,15 @@ public class Overlay extends AbstractPicture implements PropertyChangeListener {
     }
 
     public void process() {
-
         if (_overlayImage != null && _underlayImage != null) {
             System.out.println("process");
             OverlayFilter overlayFilter = new OverlayFilter(_overlayImage);
-            overlayFilter.applyInPlace(_underlayImage);
+            FastBitmap copy = new FastBitmap(_underlayImage);
+            overlayFilter.applyInPlace(copy);
 
-            setOriginal(_overlayImage);
-            setResult(_underlayImage);
-            _underlayImage.saveAsJPG("test.jpg");
+            setOriginal(new FastBitmap(_overlayImage));
+            setResult(copy);
+            copy.saveAsJPG("test.jpg");
             _overlayImage.saveAsJPG("TestOverlay.jpg");
         }
     }
