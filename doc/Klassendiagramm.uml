@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Closing</OriginalElement>
+  <nodes>
+    <node x="1675.6843291995492" y="802.3968432919955">ROIBeanInfo</node>
+    <node x="464.0000000000001" y="495.0">Erode</node>
+    <node x="692.6910935738445" y="718.3742953776775">LoadPictureBeanInfo</node>
+    <node x="1965.0" y="508.5">SavePicture</node>
+    <node x="959.8647125140924" y="713.6820744081172">MedianBeanInfo</node>
+    <node x="237.77790304396854" y="714.011273957159">DilateBeanInfo</node>
+    <node x="243.0" y="495.0">Dilate</node>
+    <node x="954.0000000000001" y="495.0">Median</node>
+    <node x="1403.5794813979705" y="700.9222096956031">ClosingBeanInfo</node>
+    <node x="1396.0" y="495.0">Closing</node>
+    <node x="1617.0" y="414.0">ROI</node>
+    <node x="2290.290868094701" y="741.3145434047351">OverlayBeanInfo</node>
+    <node x="685.0000000000001" y="495.0">LoadPicture</node>
+    <node x="970.5000000000002" y="0.0">at.itb13.beans.AbstractPicture</node>
+    <node x="1180.0496054114992" y="712.2277339346113">OpeningBeanInfo</node>
+    <node x="1175.0" y="495.0">Opening</node>
+    <node x="2304.0" y="26.5">OverlayFilter</node>
+    <node x="1970.0405862457724" y="704.9560315670801">SavePictureBeanInfo</node>
+    <node x="2211.0" y="468.0">Overlay</node>
+    <node x="463.78015783540036" y="715.4656144306651">ErodeBeanInfo</node>
+    <node x="8.714768883878378" y="710.7733934611049">ThresholdBeanInfo</node>
+    <node x="0.0" y="495.0">Threshold</node>
+    <node x="-398.48928974069895" y="527.8556933483652">DisplayPicture</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Dilate" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="343.5" y="364.0" />
+      <point x="1028.8500000000004" y="364.0" />
+      <point x="-136.14999999999998" y="167.0" />
+    </edge>
+    <edge source="Overlay" target="at.itb13.beans.AbstractPicture">
+      <point x="-87.0" y="-113.5" />
+      <point x="2298.0" y="354.0" />
+      <point x="1340.05" y="354.0" />
+      <point x="175.04999999999973" y="167.0" />
+    </edge>
+    <edge source="SavePicture" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-73.0" />
+      <point x="2078.0" y="364.0" />
+      <point x="1301.15" y="364.0" />
+      <point x="136.14999999999986" y="167.0" />
+    </edge>
+    <edge source="LoadPicture" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="809.5000000000001" y="384.0" />
+      <point x="1106.6500000000003" y="384.0" />
+      <point x="-58.34999999999991" y="167.0" />
+    </edge>
+    <edge source="Erode" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="564.5000000000001" y="374.0" />
+      <point x="1067.7500000000002" y="374.0" />
+      <point x="-97.25" y="167.0" />
+    </edge>
+    <edge source="Overlay" target="OverlayFilter">
+      <point x="87.0" y="-113.5" />
+      <point x="0.0" y="140.5" />
+    </edge>
+    <edge source="Threshold" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="111.5" y="354.0" />
+      <point x="989.9500000000003" y="354.0" />
+      <point x="-175.04999999999995" y="167.0" />
+    </edge>
+    <edge source="Median" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="1054.5" y="394.0" />
+      <point x="1145.5500000000002" y="394.0" />
+      <point x="-19.450000000000045" y="167.0" />
+    </edge>
+    <edge source="Opening" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="1275.5" y="394.0" />
+      <point x="1184.45" y="394.0" />
+      <point x="19.449999999999818" y="167.0" />
+    </edge>
+    <edge source="Closing" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-86.5" />
+      <point x="1496.5" y="384.0" />
+      <point x="1223.3500000000001" y="384.0" />
+      <point x="58.34999999999991" y="167.0" />
+    </edge>
+    <edge source="ROI" target="at.itb13.beans.AbstractPicture">
+      <point x="0.0" y="-167.5" />
+      <point x="1781.0" y="374.0" />
+      <point x="1262.2500000000002" y="374.0" />
+      <point x="97.25" y="167.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5" x="2709.0" y="633.0" />
+  <SelectedNodes>
+    <node>OverlayBeanInfo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
